@@ -24,7 +24,7 @@ func main() {
 	router.Use(gin.Recovery())
 	router.Use(middleware.RequestLogger())
 
-	db, err := sql.Open("mysql", "joshua468:Temitope2080@tcp(localhost:3306)/mydb")
+	db, err := sql.Open("mysql", "joshua468:tcp(localhost:3306)/mydb")
 	if err != nil {
 		log.Fatalf("Error connecting to database: %v", err)
 	}
